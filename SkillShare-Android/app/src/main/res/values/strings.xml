@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SkillShare</string>
+    <string name="reg_agreement">I understand and agree to <b>Privacy Policy</b> and <b>Terms of Service.</b></string>
+    <string name="reg_here">Don’t have an account? <u>Register Here !</u></string>
+    <string name="sign_in_here">Have an account? <u>Sign In Here !</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="fcm_key">AAAA_0uhSWA:APA91bFIOxJgC41-C7tklsEmQnXZ6FCoq1c4y0Gf-OE7zWHMUS-GEWKhNyOGB08EmRML8dCgRHLmzKE24JtINqAnZOeFpFfaGIf4lu2K4qTyuKWd06RbzBxVonAV4nlP6kRw-G8RRzOI</string>
+
+</resources>

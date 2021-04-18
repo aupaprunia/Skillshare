@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlChatHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp">
+
+
+        <TextView
+            android:id="@+id/txtDChatUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/quattrocento_sans"
+            android:text="HELLO NAME!"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/imgDChat"
+            android:textColor="@color/black_02"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/txtDChatContact"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/txtDChatUsername"
+            android:fontFamily="@font/quattrocento_sans"
+            android:text="Happy to have you here"
+            android:layout_toEndOf="@id/imgDChat"
+            android:textColor="@color/black_02"
+            android:textSize="14sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgDChat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:civ_border_color="#020202"
+            app:civ_border_width="1dp"
+            android:src="@drawable/ic_user_150" />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_gchat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlChatHead"
+        android:layout_marginBottom="16dp"
+        android:layout_above="@id/layout_gchat_chatbox"/>
+
+    <ListView
+        android:id="@+id/ChatListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlChatHead"
+        android:layout_above="@id/layout_gchat_chatbox"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0px"
+        android:listSelector="@android:color/transparent"
+        android:padding="10dp"
+        android:transcriptMode="alwaysScroll"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/layout_gchat_chatbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <EditText
+            android:id="@+id/edit_gchat_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_toStartOf="@+id/button_gchat_send"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/quattrocento_sans"
+            android:hint="Enter Message"
+            android:inputType="text"
+            android:maxLines="6"
+            android:textColor="@color/black_02"
+            android:textColorHint="#707070"
+            tools:ignore="Autofill" />
+
+        <Button
+            android:id="@+id/button_gchat_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackground"
+            android:fontFamily="@font/quattrocento_sans"
+            android:text="Send"
+            android:textColor="@color/black_02" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

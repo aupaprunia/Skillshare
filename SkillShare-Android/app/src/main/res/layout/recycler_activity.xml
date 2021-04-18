@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_corner10_black"
+    android:padding="10dp"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imgMatchCall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toStartOf="@id/imgMatchChat"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_phone" />
+
+        <ImageView
+            android:id="@+id/imgMatchChat"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_chat" />
+
+        <TextView
+            android:id="@+id/txtMatchUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/quattrocento_sans"
+            android:text="HELLO NAME!"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/imgMatch"
+            android:layout_toStartOf="@id/imgMatchCall"
+            android:textColor="@color/black_02"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtMatchContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/txtMatchUsername"
+            android:fontFamily="@font/quattrocento_sans"
+            android:text="Happy to have you here"
+            android:layout_toEndOf="@id/imgMatch"
+            android:layout_toStartOf="@id/imgMatchCall"
+            android:textColor="@color/black_02"
+            android:textSize="14sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgMatch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:civ_border_color="#020202"
+            app:civ_border_width="1dp"
+            android:src="@drawable/ic_user_150" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtActivityTimeStamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEEK : 2021-04-17 12:54:08"
+        android:textColor="@color/black_02"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/txtActivitySkill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="SKILL : PAINTING"
+        android:textColor="@color/black_02"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txtActivitySubSkill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="SUB SKILL : LIST OF SKILLS"
+        android:textColor="@color/black_02"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txtActivityDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="DESCRIPTION : Request Description"
+        android:layout_toEndOf="@id/imgProfile"
+        android:layout_toStartOf="@id/imgProfileLogout"
+        android:textColor="@color/black_02"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txtActivityMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="MODE : Offline"
+        android:layout_toEndOf="@id/imgProfile"
+        android:layout_toStartOf="@id/imgProfileLogout"
+        android:textColor="@color/black_02"
+        android:textSize="12sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragment.ProfileFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imgProfileLogout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_logout" />
+
+        <TextView
+            android:id="@+id/txtProfileUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/quattrocento_sans"
+            android:text="HELLO NAME!"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/imgProfile"
+            android:layout_toStartOf="@id/imgProfileLogout"
+            android:textColor="@color/black_02"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/txtProfileUsername"
+            android:fontFamily="@font/quattrocento_sans"
+            android:text="Happy to have you here"
+            android:layout_toEndOf="@id/imgProfile"
+            android:layout_toStartOf="@id/imgProfileLogout"
+            android:textColor="@color/black_02"
+            android:textSize="14sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:civ_border_color="#020202"
+            app:civ_border_width="1dp"
+            android:src="@drawable/ic_user_150" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtProfileEditAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/quattrocento_sans"
+        android:text="ADDRESS"
+        android:layout_marginTop="20dp"
+        android:drawableRight="@drawable/ic_edit"
+        android:textColor="@color/black_02"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtProfileAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_corner10_black"
+        android:fontFamily="@font/quattrocento_sans"
+        android:padding="15dp"
+        android:text="Select Location"
+        android:textColor="@color/black_02"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtProfileAddSkill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/quattrocento_sans"
+        android:text="INTERESTED SKILLS"
+        android:layout_marginTop="20dp"
+        android:drawableRight="@drawable/ic_add"
+        android:textColor="@color/black_02"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProfileSkill"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1096485521760",
+    "firebase_url": "https://skill-share-1d976-default-rtdb.firebaseio.com",
+    "project_id": "skill-share-1d976",
+    "storage_bucket": "skill-share-1d976.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096485521760:android:9b5746be1e09dac283b605",
+        "android_client_info": {
+          "package_name": "com.hackathon.skillshare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1096485521760-vc5p0jp9eb0qvdh8neehjmtq0eeh1qp9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hackathon.skillshare",
+            "certificate_hash": "bd168c1b6ba58ff2b5042f34f67d12c5add2f3d5"
+          }
+        },
+        {
+          "client_id": "1096485521760-ij8geop4k9odq9suag3n2bclmpkvle20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAp2-SIEbuUQ93ygG4MblDltUn4w4q-Uf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1096485521760-ij8geop4k9odq9suag3n2bclmpkvle20.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

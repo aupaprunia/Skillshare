@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="150dp"
+    android:layout_margin="5dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgRecSkill"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_no_thumb"
+        app:riv_border_color="#707070"
+        app:riv_border_width="1dp"
+        app:riv_corner_radius="15dp" />
+
+    <TextView
+        android:id="@+id/txtRecSkill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_skill_text"
+        android:fontFamily="@font/quattrocento_sans"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/llSkillStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"/>
+
+    <ImageView
+        android:id="@+id/imgRecSkillDelete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_circle_next"
+        android:padding="5dp"
+        app:srcCompat="@drawable/ic_delete" />
+</RelativeLayout>
