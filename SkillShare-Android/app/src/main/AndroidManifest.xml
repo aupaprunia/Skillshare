@@ -34,7 +34,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAp2-SIEbuUQ93ygG4MblDltUn4w4q-Uf4" />
+            android:value="YOUR_API_KEY_HERE" />
 
         <service android:name=".util.FCMService">
             <intent-filter>
