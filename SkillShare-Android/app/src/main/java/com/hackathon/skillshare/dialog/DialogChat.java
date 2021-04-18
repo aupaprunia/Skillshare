@@ -96,6 +96,8 @@ public class DialogChat extends DialogFragment {
             @Override
             public void onClick(View view) {
                 String message = etMessage.getText().toString().trim();
+                etMessage.setText(null);
+                etMessage.clearFocus();
                 if(!message.isEmpty()){
                     Calendar calendar = Calendar.getInstance();
                     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -111,12 +113,33 @@ public class DialogChat extends DialogFragment {
 
                     DatabaseReference databaseReferenceReceiver = firebaseDatabase.getReference("Chat/"+chatData.getUsername()+"/"+sharedPreferences.getString(Constants.USERNAME,"guest"));
                     databaseReferenceReceiver.push().setValue(chatDataCurrent);
+                }
+            }
+        });
 
-                    if (mExampleChatController != null) {
-                        mExampleChatController.add(message);
-                        mExampleChatController.show();
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReferenceMessage = firebaseDatabase.getReference("Chat/"+sharedPreferences.getString(Constants.USERNAME,"guest"));
+        databaseReferenceMessage.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    long ctr = 0;
+                    for(DataSnapshot finalData : dataSnapshot.getChildren()) {
+                        ctr++;
+                        if(ctr == dataSnapshot.getChildrenCount()) {
+                            ChatData chatData = finalData.getValue(ChatData.class);
+                            if (mExampleChatController != null) {
+                                mExampleChatController.add(chatData.getBaseMessage().getMessage()+"::"+chatData.getUsername());
+                                mExampleChatController.show();
+                            }
+                        }
                     }
                 }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
 
